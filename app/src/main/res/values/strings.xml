@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Final Quizz</string>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- String Array for age Spinner-->
+        <string-array name="spinner_ages">
+            <item>5</item>
+            <item>6</item>
+            <item>7</item>
+            <item>8</item>
+            <item>9</item>
+            <item>10</item>
+            <item>11</item>
+            <item>12</item>
+        </string-array>
+
+
+
+
+
+
+
+
+
+
+</resources>
+
+

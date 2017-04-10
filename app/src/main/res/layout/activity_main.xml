@@ -31,9 +31,15 @@
                     android:hint="Age"
                     />
                 <TextView
-                    style="@style/hMatch_vWrap"
-                    android:hint="Age"
+                    style="@style/hWrap_vWrap"
+                    android:hint="I am a: "
                     />
+                <RadioButton
+                    style="@style/hWrap_vWrap"
+                    android:text="Boy"/>
+                <RadioButton
+                    style="@style/hWrap_vWrap"
+                    android:text="Girl"/>
 
             </LinearLayout>
 

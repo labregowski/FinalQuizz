@@ -14,7 +14,6 @@ import android.widget.Spinner;
         setContentView(R.layout.activity_main);
     }
 
-
 //    Linking Spinner to data array (ages)
         Spinner spinner = (Spinner) findViewById(R.id.id_ageSpinner);
         // Create an ArrayAdapter using the string array and a default spinner layout

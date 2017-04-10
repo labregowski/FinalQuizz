@@ -1,16 +1,5 @@
 <resources>
     <string name="app_name">Final Quizz</string>
-
-
-
-
-
-
-
-
-
-
-
     <!-- String Array for age Spinner-->
         <string-array name="spinner_ages">
             <item>5</item>

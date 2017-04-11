@@ -42,9 +42,12 @@
                     android:text="Girl"/>
 
             </LinearLayout>
-
+            <Button
+                android:id="@+id/id_submit"
+                style="@style/hWrap_vWrap"
+                android:text="Submit"
+                />
         </LinearLayout>
-
 
 
 

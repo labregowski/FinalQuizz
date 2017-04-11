@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Kids Quiz</string>
+    <string name="app_name">Smartphone Usage by Youngsters</string>
     <!-- String Array for age Spinner-->
         <string-array name="spinner_ages">
             <item>5</item>
@@ -11,6 +11,11 @@
             <item>11</item>
             <item>12</item>
         </string-array>
+
+    <!-- Field labels -->
+    <string name="route1">Climbing Route #1</string>
+
+
 </resources>
 
 

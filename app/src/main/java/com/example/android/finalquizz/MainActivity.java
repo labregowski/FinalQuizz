@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -17,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
     private Button btnSubmit;
 
 
+    //Variables
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,11 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
         // Innitiate UI components
         ageSpinner = (Spinner) findViewById(R.id.id_ageSpinner);
+        btnSubmit = (Button) findViewById(R.id.id_submit);
 
         //Innitiate variables
         String kidAge="";
 
-        // Add listeners
+        // Calling Add listeners' Methods-
         addListenerSubmitButton();
         // Spinner item selection Listener  
         addListenerOnSpinnerItemSelection();
@@ -42,13 +49,16 @@ public class MainActivity extends AppCompatActivity {
         ageSpinner.setAdapter(dataAdapter);
 
         kidAge =  String.valueOf(ageSpinner.getSelectedItem());
-
     }
 
     private void addListenerOnSpinnerItemSelection() {
         ageSpinner.setOnItemSelectedListener(new SpinnerActivity());
     }
 
+
+    /**
+     * Adds Listener for Submit Button
+     */
     public void addListenerSubmitButton() {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             public void onClick (View v){
@@ -60,8 +70,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Spinner: Responding User Selections
+     */
     public class SpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
-
 
         public void onItemSelected(AdapterView<?> parent, View view,
                                    int pos, long id) {
@@ -74,4 +86,28 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-}
+    /**
+     * Controling Radio Button Groups
+     */
+
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+//            case R.id.radio_pirates:
+//                if (checked)
+//                    // Pirates are the best
+//                    break;
+//            case R.id.radio_ninjas:
+//                if (checked)
+//                    // Ninjas rule
+//                    break;
+        }
+    }
+
+
+
+}//End of MainActivity

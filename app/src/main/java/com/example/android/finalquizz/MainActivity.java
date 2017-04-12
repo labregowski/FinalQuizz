@@ -294,8 +294,12 @@ public class MainActivity extends AppCompatActivity {
                String stringpoints=""+points;
                summaryArea.requestFocus();
 //               Toast.makeText(MainActivity.this, getResources().getString(R.string.postReview), Toast.LENGTH_LONG).show();
-               Toast.makeText(MainActivity.this,stringpoints, Toast.LENGTH_LONG).show();
-
+               //Toast.makeText(MainActivity.this,stringpoints, Toast.LENGTH_LONG).show();
+               if (!(name.equals(NOT_PROVIDED))){
+                   Toast.makeText(MainActivity.this,getResources().getString(R.string.pointsString,name,points), Toast.LENGTH_LONG).show();
+               } else {
+                   Toast.makeText(MainActivity.this,getResources().getString(R.string.missesName), Toast.LENGTH_SHORT).show();
+               }
            }
        });
 
@@ -534,6 +538,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void resetVariables (){
+        newParentsMobile="";
+
 //        points=0;
 //        name="";
 //        wantsToLearnOther="";
@@ -548,7 +554,11 @@ public class MainActivity extends AppCompatActivity {
      */
     private String createQuizSummary() {
         getCurrentVariableValues(); //variables are global, so they will refresh here too :D
+            //needed to reset stringified telephone number
+            resetVariables();
+
         // Preparing nicer text for "Wants to Learn"
+
 
             if (name.equals("")){
                 name+= NOT_PROVIDED;
@@ -649,7 +659,6 @@ public class MainActivity extends AppCompatActivity {
             quizSummary += "\n";
             quizSummary += "\n" + PARENTS_EMAIL +" "+ parentsEmail;
             quizSummary += "\n" + PARENTS_TELEPHONE +" "+ newParentsMobile;
-            quizSummary += "\n" + getResources().getString(R.string.pointsString, name, points);
 
             return quizSummary;
     }

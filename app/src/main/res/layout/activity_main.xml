@@ -244,12 +244,13 @@
                 <Button
                     android:id="@+id/id_submit"
                     style="@style/standardButton"
-                    android:text="Submit"
+                    android:text="Review questionaire"
                     />
 
                 <TextView
                     android:id="@+id/id_quizSummary"
                     style="@style/groupTitleTextView"
+                    android:focusableInTouchMode="true"
                     android:hint="Placeholder for summary before sending to email" />
                 <RelativeLayout
                     style="@style/hMatch_vMatch"

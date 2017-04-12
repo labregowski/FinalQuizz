@@ -15,6 +15,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 import static java.lang.Integer.parseInt;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button      btnSubmit,
                         btnEmail,
                         btnReset;
+    private TextView    summaryArea;
     private RadioGroup  radioSexGroup,
                         radioDailyUsageGroup,
                         radioGroupInterestedInJournalismClub,
@@ -111,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
         btnEmail = (Button) findViewById(R.id.id_eMailData);
         btnReset = (Button) findViewById(R.id.id_reset);
 
+        summaryArea= (TextView)findViewById(R.id.id_quizSummary);
+
 
         // Calling Add listeners' Methods
         addListenerEmailButton();
@@ -185,7 +189,8 @@ public class MainActivity extends AppCompatActivity {
            public void onClick(View v) {
 
                displayQuizSummary (createQuizSummary());
-//               btnSubmit.requestFocus();
+
+               summaryArea.requestFocus();
 
            }
        });

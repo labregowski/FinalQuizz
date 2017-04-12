@@ -46,7 +46,7 @@
     <style name="standardButton" parent="hWrap_vWrap">
         <item name="android:layout_marginTop">15dp</item>
         <item name="android:layout_marginBottom">10dp</item>
-        <item name="android:focusableInTouchMode">true</item>
+        <!--<item name="android:focusableInTouchMode">true</item> If on, firt touch is to setfocus...so, won't use-->
     </style>
 
 

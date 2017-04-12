@@ -267,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
 
                displayQuizSummary (createQuizSummary());
                summaryArea.requestFocus();
-               Toast.makeText(MainActivity.this, getResources().getString(R.string.postReview), Toast.LENGTH_SHORT).show();
+               Toast.makeText(MainActivity.this, getResources().getString(R.string.postReview), Toast.LENGTH_LONG).show();
 
            }
        });
@@ -301,7 +301,7 @@ public class MainActivity extends AppCompatActivity {
                 firstQuestion.requestFocus();
                 //iF there was an interview we assume that interviewer got at least the name, a toast encouraging to find another kid to interview
                 if (!name.equals("")&&!name.equals(NOT_PROVIDED) ){
-                Toast.makeText(MainActivity.this, getResources().getString(R.string.nextInterview, name), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, getResources().getString(R.string.nextInterview, name), Toast.LENGTH_LONG).show();
                }
                 // reset name (the variable that says the interview was performed or not
                 name="";

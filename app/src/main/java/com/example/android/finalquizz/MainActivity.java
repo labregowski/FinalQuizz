@@ -302,7 +302,6 @@ public class MainActivity extends AppCompatActivity {
                }
            }
        });
-
        }
     /**
      * Adds Listener to submission Button and displays summary
@@ -392,13 +391,10 @@ public class MainActivity extends AppCompatActivity {
         ageSpinner.setSelection(0);
     }
 
-
-
     /**
      * retrieves the variables (user inserted) from the UI.
      * The variables are global. So, no need to return - they are available to all methods
      */
-
     private void getCurrentVariableValues(){
         //From EditText
         name=getFromEditText(R.id.id_name);
@@ -436,7 +432,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Collects points from the answers that are compulsory
+     * Collects points from the answers
      *
      */
     private void collectPoints() {
@@ -537,16 +533,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Resets some variables
+     */
     private void resetVariables (){
         newParentsMobile="";
-
-//        points=0;
-//        name="";
-//        wantsToLearnOther="";
-//        parentsEmail="";
-//        parentsMobile=0;
     }
-
 
     /**
      * Creates the summary of the user input
@@ -554,12 +546,10 @@ public class MainActivity extends AppCompatActivity {
      */
     private String createQuizSummary() {
         getCurrentVariableValues(); //variables are global, so they will refresh here too :D
-            //needed to reset stringified telephone number
+            //needed to reset "stringified" telephone number variable not to concatenate wth previous value
             resetVariables();
 
         // Preparing nicer text for "Wants to Learn"
-
-
             if (name.equals("")){
                 name+= NOT_PROVIDED;
             };
@@ -613,7 +603,6 @@ public class MainActivity extends AppCompatActivity {
             {
                 mobileOwnership += getResources().getString(R.string.did_not_reply);
             };
-
 
             //Usage
 

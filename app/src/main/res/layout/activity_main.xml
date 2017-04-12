@@ -9,7 +9,7 @@
     <ScrollView
         style="@style/globalContainer"
         android:layout_marginTop="8dp"
-        android:clipToPadding="true"
+        android:clipToPadding="false"
         android:fillViewport="true"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="dp">
@@ -21,7 +21,10 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/id_firstQuestion"
                     style="@style/groupTitleTextView"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:text="What is your name?" />
 
                 <EditText
@@ -244,22 +247,23 @@
                 <Button
                     android:id="@+id/id_submit"
                     style="@style/standardButton"
-                    android:text="Review questionaire"
-                    />
+                    android:text="Review questionaire" />
 
                 <TextView
                     android:id="@+id/id_quizSummary"
                     style="@style/groupTitleTextView"
+                    android:focusable="true"
                     android:focusableInTouchMode="true"
                     android:hint="Placeholder for summary before sending to email" />
+
                 <RelativeLayout
                     style="@style/hMatch_vMatch"
                     android:layout_marginBottom="20dp">
+
                     <Button
                         android:id="@+id/id_eMailData"
                         style="@style/standardButton"
-                        android:text="Send by mail"
-                        />
+                        android:text="Send by mail" />
 
                     <Button
                         android:id="@+id/id_reset"
@@ -267,9 +271,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_gravity="end"
-                        android:text="Reset"
-                        />
-                     </RelativeLayout>
+                        android:text="Reset" />
+                </RelativeLayout>
 
             </LinearLayout>
 

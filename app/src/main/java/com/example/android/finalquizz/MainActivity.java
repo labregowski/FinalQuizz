@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private Button      btnSubmit,
                         btnEmail,
                         btnReset;
-    private TextView    summaryArea;
+                        //these TextViews will receive focus at beginning and after buttons are pushed
+    private TextView    summaryArea,
+                        firstQuestion;
     private RadioGroup  radioSexGroup,
                         radioDailyUsageGroup,
                         radioGroupInterestedInJournalismClub,
@@ -114,7 +116,10 @@ public class MainActivity extends AppCompatActivity {
         btnReset = (Button) findViewById(R.id.id_reset);
 
         summaryArea= (TextView)findViewById(R.id.id_quizSummary);
+        firstQuestion = (TextView)findViewById(R.id.id_firstQuestion);
 
+        //Setting focu on firstQuestion TextView, not to open the tyepad
+        firstQuestion.requestFocus();
 
         // Calling Add listeners' Methods
         addListenerEmailButton();
@@ -189,7 +194,6 @@ public class MainActivity extends AppCompatActivity {
            public void onClick(View v) {
 
                displayQuizSummary (createQuizSummary());
-
                summaryArea.requestFocus();
 
            }

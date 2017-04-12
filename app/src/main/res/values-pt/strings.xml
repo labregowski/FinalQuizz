@@ -40,7 +40,8 @@
     <string name="girl">Menina</string>
     <string name="how_many_hours_per_day">Quantas horas por dia</string>
     <string name="how_often_you_use_a_smartphone">Com que frequência usa um smartphone?</string>
-    <string name="i_am_a">Eu tenho</string>
+    <string name="i_am">Eu tenho</string>
+    <string name="and_i_am_a">E sou um(a) </string>
     <string name="joinDIYRobtClub">Gostaria de fazer um pequeno robô e controlá-lo a partir do seu telemóvel?</string>
     <string name="knowMore">O que você gostaria de saber sobre o seu smartphone</string>
     <string name="learnOtherStuff">Há mais alguma coisa que você gostaria de aprender a fazer com seu celular?</string>

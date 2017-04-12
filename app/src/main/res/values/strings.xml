@@ -38,7 +38,8 @@
     <string name="what_is_your_name">What is your name?</string>
     <string name="type_first_name_last_name">type First Name / Last Name</string>
     <string name="age_and_sex">Age and sex</string>
-    <string name="i_am_a">I am a</string>
+    <string name="i_am">I am </string>
+    <string name="and_i_am_a">And I am a </string>
     <string name="boy">Boy</string>
     <string name="girl">Girl</string>
     <string name="how_many_hours_per_day">how many hours per day</string>

@@ -43,14 +43,23 @@
 
                     <TextView
                         style="@style/hWrap_vWrap"
-                        android:hint="@string/i_am_a" />
+                        android:hint="@string/i_am" />
 
 
                     <Spinner
                         android:id="@+id/id_ageSpinner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hMatch_vWrap"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp">
 
+                        <TextView
+                            style="@style/hWrap_vWrap"
+                            android:hint="@string/and_i_am_a" />
 
                     <RadioGroup
                         android:id="@+id/id_RG_boyOrGirl"

@@ -20,25 +20,43 @@ import static java.lang.Integer.parseInt;
 public class MainActivity extends AppCompatActivity {
 
     //Used Strings
-    //TODO - crashing when getting Resources from strings.xml
+
 //    private String DID_NOT_REPLY = getResources().getString(R.string.did_not_reply);
-    private String NOT_PROVIDED;// = getResources().getString(R.string.NOT_PROVIDED);
+    // = getResources().getString(R.string.NOT_PROVIDED);
     private static final String DID_NOT_REPLY = "did not reply";
 //    private static final String NOT_PROVIDED = "not provided";
+    private String  NOT_PROVIDED,
+                    YOUR_AGE,
+                    YES,
+                    WANTS_TO_JOIN_E_JOURNALISTS_CLUB,
+                    WANTS_TO_JOIN_DIY_ROBOTS_CLUB,
+                    IS_INTERESTED_IN,
+                    USUAL_MOBILE,
+                    USES_SMARTPHONE_TO,
+                    PARENTS_TELEPHONE,
+                    PARENTS_EMAIL,
+                    AVERAGE_MOBILE_USAGE,
+                    AGE,
+                    SEX,
+                    NAME;
 
-    private static final String YOUR_AGE = "(your age)";
-    private static final String YES = "Yes";
-    private static final String WANTS_TO_JOIN_E_JOURNALISTS_CLUB = "Wants to join e-Journalists Club";
-    private static final String WANTS_TO_JOIN_DIY_ROBOTS_CLUB = "Wants to join DIY Robots Club";
-    private static final String IS_INTERESTED_IN = "Is interested in ";
-    private static final String USUAL_MOBILE = "Usual Mobile: ";
-    private static final String USES_SMARTPHONE_TO = "Uses smartphone to: ";
-    private static final String PARENTS_TELEPHONE = "Parents' telephone: ";
-    private static final String PARENTS_EMAIL = "Parents' email: ";
-    private static final String AVERAGE_MOBILE_USAGE = "Average Mobile Usage: ";
-    private static final String AGE = "Age: ";
-    private static final String SEX = "Sex: ";
-    private static final String NAME = "Name: ";
+
+//    private static final String YOUR_AGE = "(your age)";
+//    private static final String YES = "Yes";
+//    private static final String WANTS_TO_JOIN_E_JOURNALISTS_CLUB = "Wants to join e-Journalists Club";
+//    private static final String WANTS_TO_JOIN_DIY_ROBOTS_CLUB = "Wants to join DIY Robots Club";
+//    private static final String IS_INTERESTED_IN = "Is interested in ";
+//    private static final String USUAL_MOBILE = "Usual Mobile: ";
+//    private static final String USES_SMARTPHONE_TO = "Uses smartphone to: ";
+//    private static final String PARENTS_TELEPHONE = "Parents' telephone: ";
+//    private static final String PARENTS_EMAIL = "Parents' email: ";
+//    private static final String AVERAGE_MOBILE_USAGE = "Average Mobile Usage: ";
+//    private static final String AGE = "Age: ";
+//    private static final String SEX = "Sex: ";
+//    private static final String NAME = "Name: ";
+
+
+
     //UI components
     private Spinner     ageSpinner;
     private Button      btnSubmit,
@@ -91,8 +109,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        NOT_PROVIDED = getResources().getString(R.string.NOT_PROVIDED);
+        //UI and code needed Strings initialization
+                    NOT_PROVIDED = getResources().getString(R.string.NOT_PROVIDED);
 
+                    YOUR_AGE = getResources().getString(R.string.YOUR_AGE);
+                    YES = getResources().getString(R.string.YES);
+                    WANTS_TO_JOIN_E_JOURNALISTS_CLUB = getResources().getString(R.string.WANTS_TO_JOIN_E_JOURNALISTS_CLUB);
+                    WANTS_TO_JOIN_DIY_ROBOTS_CLUB = getResources().getString(R.string.WANTS_TO_JOIN_DIY_ROBOTS_CLUB);
+                    IS_INTERESTED_IN = getResources().getString(R.string.IS_INTERESTED_IN);
+                    USUAL_MOBILE = getResources().getString(R.string.USUAL_MOBILE);
+                    USES_SMARTPHONE_TO = getResources().getString(R.string.USES_SMARTPHONE_TO);
+                    PARENTS_TELEPHONE = getResources().getString(R.string.PARENTS_TELEPHONE);
+                    PARENTS_EMAIL = getResources().getString(R.string.PARENTS_EMAIL);
+                    AVERAGE_MOBILE_USAGE = getResources().getString(R.string.AVERAGE_MOBILE_USAGE);
+                    AGE = getResources().getString(R.string.AGE);
+                    SEX = getResources().getString(R.string.SEX);
+                    NAME = getResources().getString(R.string.NAME);
 
         //Initialize variables - Read in a blog that it is good preceureto innitialize in onCreate.
                     name="";
@@ -315,7 +347,7 @@ public class MainActivity extends AppCompatActivity {
             };
 
             //Mobile Ownership
-            mobileOwnership = USUAL_MOBILE;
+            mobileOwnership = USUAL_MOBILE + " ";
             String mobileOwnershipStatic = mobileOwnership;
             if (!ownMobile.equals("")){
                 mobileOwnership += "\n         "+ownMobile;
@@ -341,7 +373,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Usage
 
-            usage= USES_SMARTPHONE_TO;
+            usage= USES_SMARTPHONE_TO + " ";
             String usageStatic = usage;
             if (!playGames.equals("")){
             usage += "\n         "+playGames;
@@ -369,11 +401,11 @@ public class MainActivity extends AppCompatActivity {
                 usage += getResources().getString(R.string.did_not_reply);
             };
 
-            String quizSummary = NAME + name;
-            quizSummary += "\n" + SEX + kidsSex;
-            quizSummary += "\n" + AGE + kidsAge;
+            String quizSummary = NAME +" "+ name;
+            quizSummary += "\n" + SEX +" "+ kidsSex;
+            quizSummary += "\n" + AGE +" "+ kidsAge;
             quizSummary += "\n";
-            quizSummary += "\n" + AVERAGE_MOBILE_USAGE + usagePerDay;
+            quizSummary += "\n" + AVERAGE_MOBILE_USAGE +" "+ usagePerDay;
             quizSummary += "\n" + mobileOwnership;
             quizSummary += "\n" + usage;
             quizSummary += "\n";
@@ -381,8 +413,8 @@ public class MainActivity extends AppCompatActivity {
             quizSummary += joinDIYRobots;
             quizSummary += otherInterests;
             quizSummary += "\n";
-            quizSummary += "\n" + PARENTS_EMAIL + parentsEmail;
-            quizSummary += "\n" + PARENTS_TELEPHONE + newParentsMobile;
+            quizSummary += "\n" + PARENTS_EMAIL +" "+ parentsEmail;
+            quizSummary += "\n" + PARENTS_TELEPHONE +" "+ newParentsMobile;
 
             return quizSummary;
     }

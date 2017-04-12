@@ -14,7 +14,7 @@
 
     <!-- MainActivity.java -->
     <string name="did_not_reply">did not reply</string>
-    <string name="NOT_PROVIDED">not providedyy</string>
+    <string name="NOT_PROVIDED">not provided</string>
     <string name="YOUR_AGE">(your age)</string>
     <string name="YES">Yes</string>
     <string name="WANTS_TO_JOIN_E_JOURNALISTS_CLUB">Wants to join e-Journalists Club</string>
@@ -34,6 +34,43 @@
     <!--TODO Aqui é para meter o xlif!!!-->
     <string name="subject">Kids quiz. Result from KID XLIFT</string>
     <string name="sendTo">KidsClubs@nascente.pt</string>
+    <!-- UI -->
+    <string name="what_is_your_name">What is your name?</string>
+    <string name="type_first_name_last_name">type First Name / Last Name</string>
+    <string name="age_and_sex">Age and sex</string>
+    <string name="i_am_a">I am a</string>
+    <string name="boy">Boy</string>
+    <string name="girl">Girl</string>
+    <string name="how_many_hours_per_day">how many hours per day</string>
+    <string name="how_often_you_use_a_smartphone">How often you use a smartphone?</string>
+    <string name="less_than_1_hour_per_day">less than 1 hour per day</string>
+    <string name="_2_to_3_hours_per_day">2 to 3 hours per day</string>
+    <string name="more_than_4_hours_per_day">more than 4 hours per day</string>
+    <string name="whose_mobile_do_you_use">Whose mobile do you use?</string>
+    <string name="own_mobile">Own mobile</string>
+    <string name="from_a_family_member">From a family member</string>
+    <string name="from_a_friend">From a friend</string>
+    <string name="from_someone_else">From someone Else</string>
+    <string name="mobileUsage">What do you do with the mobile? From bellow, choose only the 2 most important usages</string>
+    <string name="play_games">Play Games</string>
+    <string name="chat">Chat</string>
+    <string name="calls_or_video_calls">Calls or video calls</string>
+    <string name="facebook_pinterest_instagram">Facebook, Pinterest, Instagram</string>
+    <string name="surf_the_web">Surf the web</string>
+    <string name="school_work">School Work</string>
+    <string name="wantJoinJournal">Would you like to join a youngsters\' journal club where you can interview people, edit videos and photos on your mobile?</string>
+    <string name="yes">Yes</string>
+    <string name="no_thanks">No, thanks</string>
+    <string name="joinDIYRobtClub">Would you like to make a small robot and control it from your mobile?</string>
+    <string name="learnOtherStuff">Is there anything else you would like to learn to do with your mobile?</string>
+    <string name="knowMore">What would you like to know about your smartphone</string>
+    <string name="wantsTocontactParentsQuestion">Want us to contact your parents about this? Leave their email and / or telephone</string>
+    <string name="parent_s_email">Parent\'s email</string>
+    <string name="parent_s_telephone">Parent\'s telephone</string>
+    <string name="review_questionaire">Review questionaire</string>
+    <string name="placeholderForSummary">Placeholder for summary before sending to email</string>
+    <string name="send_by_mail">Send by mail</string>
+    <string name="reset">Reset</string>
 
 </resources>
 

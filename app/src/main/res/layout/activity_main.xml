@@ -25,16 +25,16 @@
                     style="@style/groupTitleTextView"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
-                    android:text="What is your name?" />
+                    android:text="@string/what_is_your_name" />
 
                 <EditText
                     android:id="@+id/id_name"
                     style="@style/hMatch_vWrap"
-                    android:hint="type First Name / Last Name" />
+                    android:hint="@string/type_first_name_last_name" />
 
                 <TextView
                     style="@style/groupTitleTextView"
-                    android:text="Age and sex" />
+                    android:text="@string/age_and_sex" />
 
                 <LinearLayout
                     style="@style/hMatch_vWrap"
@@ -43,7 +43,7 @@
 
                     <TextView
                         style="@style/hWrap_vWrap"
-                        android:hint="I am  a " />
+                        android:hint="@string/i_am_a" />
 
 
                     <Spinner
@@ -60,19 +60,19 @@
                         <RadioButton
                             android:id="@+id/id_radioBoy"
                             style="@style/hWrap_vWrap"
-                            android:text="Boy" />
+                            android:text="@string/boy" />
 
                         <RadioButton
                             android:id="@+id/id_radiGirl"
                             style="@style/hWrap_vWrap"
-                            android:text="Girl" />
+                            android:text="@string/girl" />
                     </RadioGroup>
                 </LinearLayout>
 
                 <TextView
                     style="@style/groupTitleTextView"
-                    android:hint="how many hours per day"
-                    android:text="How often you use a smartphone? " />
+                    android:hint="@string/how_many_hours_per_day"
+                    android:text="@string/how_often_you_use_a_smartphone" />
 
                 <RadioGroup
                     android:id="@+id/id_RG_hoursDay"
@@ -82,46 +82,46 @@
                     <RadioButton
                         android:id="@+id/id_hoursLessthanOne"
                         style="@style/hWrap_vWrap"
-                        android:text="less than 1 hour per day" />
+                        android:text="@string/less_than_1_hour_per_day" />
 
                     <RadioButton
                         android:id="@+id/id_hours2to3"
                         style="@style/hWrap_vWrap"
-                        android:text="2 to 3 hours per day" />
+                        android:text="@string/_2_to_3_hours_per_day" />
 
                     <RadioButton
                         android:id="@+id/id_hours3to4"
                         style="@style/hWrap_vWrap"
-                        android:text="more than 4 hours per day" />
+                        android:text="@string/more_than_4_hours_per_day" />
                 </RadioGroup>
 
                 <TextView
                     style="@style/groupTitleTextView"
-                    android:text="Whose mobile do you use?" />
+                    android:text="@string/whose_mobile_do_you_use" />
 
                 <CheckBox
                     android:id="@+id/id_ownMobile"
                     style="@style/hWrap_vWrap"
-                    android:text="Own mobile" />
+                    android:text="@string/own_mobile" />
 
                 <CheckBox
                     android:id="@+id/id_familyMobile"
                     style="@style/hWrap_vWrap"
-                    android:text="From a family member" />
+                    android:text="@string/from_a_family_member" />
 
                 <CheckBox
                     android:id="@+id/id_friendMobile"
                     style="@style/hWrap_vWrap"
-                    android:text="From a friend" />
+                    android:text="@string/from_a_friend" />
 
                 <CheckBox
                     android:id="@+id/id_fromSomeonElse"
                     style="@style/hWrap_vWrap"
-                    android:text="From someone Else" />
+                    android:text="@string/from_someone_else" />
 
                 <TextView
                     style="@style/groupTitleTextView"
-                    android:text="What do you do with the mobile? From bellow, choose only the 2 most important usages" />
+                    android:text="@string/mobileUsage" />
 
                 <LinearLayout
                     style="@style/hMatch_vWrap"
@@ -130,12 +130,12 @@
                     <CheckBox
                         android:id="@+id/id_playGames"
                         style="@style/checkOrRadioElement"
-                        android:text="Play Games" />
+                        android:text="@string/play_games" />
 
                     <CheckBox
                         android:id="@+id/id_chat"
                         style="@style/checkOrRadioElement"
-                        android:text="Chat" />
+                        android:text="@string/chat" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -145,7 +145,7 @@
                     <CheckBox
                         android:id="@+id/id_talk"
                         style="@style/checkOrRadioElement"
-                        android:text="Calls or video calls" />
+                        android:text="@string/calls_or_video_calls" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -155,7 +155,7 @@
                     <CheckBox
                         android:id="@+id/id_socialNetworks"
                         style="@style/checkOrRadioElement"
-                        android:text="Facebook, Pinterest, Instagram" />
+                        android:text="@string/facebook_pinterest_instagram" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -165,17 +165,17 @@
                     <CheckBox
                         android:id="@+id/id_surfWeb"
                         style="@style/checkOrRadioElement"
-                        android:text="Surf the web" />
+                        android:text="@string/surf_the_web" />
 
                     <CheckBox
                         android:id="@+id/id_schoolWork"
                         style="@style/checkOrRadioElement"
-                        android:text="School Work" />
+                        android:text="@string/school_work" />
                 </LinearLayout>
 
                 <TextView
                     style="@style/groupTitleTextView"
-                    android:text="Would you like to join a youngsters' journal club where you can interview people, edit videos and photos on your mobile?" />
+                    android:text="@string/wantJoinJournal" />
 
                 <RadioGroup
                     android:id="@+id/id_RG_journalism"
@@ -185,17 +185,17 @@
                     <RadioButton
                         android:id="@+id/id_videoYes"
                         style="@style/hWrap_vWrap"
-                        android:text="Yes" />
+                        android:text="@string/yes" />
 
                     <RadioButton
                         android:id="@+id/id_videoNo"
                         style="@style/hWrap_vWrap"
-                        android:text="No, thanks" />
+                        android:text="@string/no_thanks" />
                 </RadioGroup>
 
                 <TextView
                     style="@style/groupTitleTextView"
-                    android:text="Would you like to make a small robot and control it from your mobile?" />
+                    android:text="@string/joinDIYRobtClub" />
 
                 <RadioGroup
                     android:id="@+id/id_RG_DIYRobotic"
@@ -205,37 +205,37 @@
                     <RadioButton
                         android:id="@+id/id_robotYes"
                         style="@style/hWrap_vWrap"
-                        android:text="Yes" />
+                        android:text="@string/yes" />
 
                     <RadioButton
                         android:id="@+id/id_robotNo"
                         style="@style/hWrap_vWrap"
-                        android:text="No, thanks" />
+                        android:text="@string/no_thanks" />
                 </RadioGroup>
 
                 <TextView
                     style="@style/groupTitleTextView"
-                    android:text="Is there anything else you would like to learn to do with your mobile?" />
+                    android:text="@string/learnOtherStuff" />
 
                 <EditText
                     android:id="@+id/id_knowOther"
                     style="@style/hMatch_vWrap"
-                    android:hint="What would you like to know about your smartphone" />
+                    android:hint="@string/knowMore" />
 
                 <TextView
                     style="@style/groupTitleTextView"
-                    android:text="Want us to contact your parents about this? Leave their email and / or telephone" />
+                    android:text="@string/wantsTocontactParentsQuestion" />
 
                 <EditText
                     android:id="@+id/id_email"
                     style="@style/hMatch_vWrap"
-                    android:hint="Parent's email"
+                    android:hint="@string/parent_s_email"
                     android:inputType="textEmailAddress" />
 
                 <EditText
                     android:id="@+id/id_telephone"
                     style="@style/hMatch_vWrap"
-                    android:hint="Parent's telephone"
+                    android:hint="@string/parent_s_telephone"
                     android:inputType="number" />
 
                 <LinearLayout
@@ -247,14 +247,14 @@
                 <Button
                     android:id="@+id/id_submit"
                     style="@style/standardButton"
-                    android:text="Review questionaire" />
+                    android:text="@string/review_questionaire" />
 
                 <TextView
                     android:id="@+id/id_quizSummary"
                     style="@style/groupTitleTextView"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
-                    android:hint="Placeholder for summary before sending to email" />
+                    android:hint="@string/placeholderForSummary" />
 
                 <RelativeLayout
                     style="@style/hMatch_vMatch"
@@ -263,7 +263,7 @@
                     <Button
                         android:id="@+id/id_eMailData"
                         style="@style/standardButton"
-                        android:text="Send by mail" />
+                        android:text="@string/send_by_mail" />
 
                     <Button
                         android:id="@+id/id_reset"
@@ -271,7 +271,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_gravity="end"
-                        android:text="Reset" />
+                        android:text="@string/reset" />
                 </RelativeLayout>
 
             </LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- String Array for age Spinner-->
+    <string-array name="spinner_ages">
+        <item>(a tua idade)</item>
+        <item>6 anos</item>
+        <item>7 anos</item>
+        <item>8 anos</item>
+        <item>9 anos</item>
+        <item>10 anos</item>
+        <item>11 anos</item>
+        <item>12 anos</item>
+    </string-array>
+
+    <string name="app_name">Uso do Smartphone por miúdos</string>
+    <string name="AGE">Idade: </string>
+    <string name="AVERAGE_MOBILE_USAGE">Utilização Média</string>
+    <string name="IS_INTERESTED_IN">Está interessado em</string>
+    <string name="NAME">Nome: </string>
+    <string name="NOT_PROVIDED">Não preencheu</string>
+    <string name="PARENTS_EMAIL">E-mail dos pais: </string>
+    <string name="PARENTS_TELEPHONE">Telefone dos pais: </string>
+    <string name="SEX">Sexo: </string>
+    <string name="USES_SMARTPHONE_TO">Usa o smartphone para: </string>
+    <string name="USUAL_MOBILE">Telemóvel Usual: </string>
+    <string name="WANTS_TO_JOIN_DIY_ROBOTS_CLUB">Quer juntar-se ao clube de robôs</string>
+    <string name="WANTS_TO_JOIN_E_JOURNALISTS_CLUB">Quer entrar para o clube e-jornalistas</string>
+    <string name="YES">Sim</string>
+    <string name="YOUR_AGE">(a tua idade)</string>
+    <string name="_2_to_3_hours_per_day">2 a 3 horas por dia</string>
+    <string name="age_and_sex">Idade e sexo</string>
+    <string name="boy">Menino</string>
+    <string name="calls_or_video_calls">Chamadas ou chamadas de vídeo</string>
+    <string name="chat">Chat</string>
+    <string name="did_not_reply">não respondeu</string>
+    <string name="facebook_pinterest_instagram">Facebook, Pinterest, Instagram</string>
+    <string name="from_a_family_member">De um membro da família</string>
+    <string name="from_a_friend">De um amigo</string>
+    <string name="from_someone_else">De outra pessoa</string>
+    <string name="girl">Menina</string>
+    <string name="how_many_hours_per_day">Quantas horas por dia</string>
+    <string name="how_often_you_use_a_smartphone">Com que frequência usa um smartphone?</string>
+    <string name="i_am_a">Eu tenho</string>
+    <string name="joinDIYRobtClub">Gostaria de fazer um pequeno robô e controlá-lo a partir do seu telemóvel?</string>
+    <string name="knowMore">O que você gostaria de saber sobre o seu smartphone</string>
+    <string name="learnOtherStuff">Há mais alguma coisa que você gostaria de aprender a fazer com seu celular?</string>
+    <string name="less_than_1_hour_per_day">menos de 1 hora por dia</string>
+    <string name="mobileUsage">O que você faz com o celular? Abaixo, escolha apenas os 2 mais importantes usos</string>
+    <string name="more_than_4_hours_per_day">mais de 4 horas por dia</string>
+    <string name="no_thanks">Não, obrigado</string>
+    <string name="own_mobile">Telemóvel próprio</string>
+    <string name="parent_s_email">E-mail dos pais: </string>
+    <string name="parent_s_telephone">Telefone dos pais: </string>
+    <string name="placeholderForSummary">Espaço reservado para o resumo antes de enviar para o e-mail</string>
+    <string name="play_games">Jogar jogos</string>
+    <string name="reset">Limpar dados</string>
+    <string name="review_questionaire">Revisão do questionário</string>
+    <string name="school_work">Trabalho de escola</string>
+    <string name="sendTo">KidsClubs@nascente.pt</string>
+    <string name="send_by_mail">Enviar por e-mail</string>
+    <string name="subject">Questionário de crianças.</string>
+    <string name="surf_the_web">Navegar na web</string>
+    <string name="type_first_name_last_name">Digite o nome / sobrenome</string>
+    <string name="wantJoinJournal">Gostaria de participar num clube de meninos jornalistas onde você pode entrevistar pessoas, editar vídeos e fotos no seu celular?</string>
+    <string name="wantsTocontactParentsQuestion">Quer que entremos em contato com seus pais sobre o clube? Deixe os seus e-mail e / ou telefone</string>
+    <string name="what_is_your_name">Qual é o seu nome?</string>
+    <string name="whose_mobile_do_you_use">De quem é o celular que você usa?</string>
+    <string name="yes">Sim</string>
+</resources>

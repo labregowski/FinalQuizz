@@ -16,6 +16,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.os.Build.VERSION_CODES.N;
+import static com.example.android.finalquizz.R.string.reset;
 import static java.lang.Integer.parseInt;
 
 public class MainActivity extends AppCompatActivity {
@@ -53,6 +55,17 @@ public class MainActivity extends AppCompatActivity {
                         radioDailyUsageGroup,
                         radioGroupInterestedInJournalismClub,
                         radioGroupInterestedInDIYRobotic;
+    private RadioButton rb_Boy,
+                        rb_Girl,
+                        rb_less1h,
+                        rb_1_3,
+                        rb_3plus,
+                        rb_jurnY,
+                        rb_journN,
+                        rb_DIYY,
+                        rb_DIYN;
+
+
     private CheckBox    ch_OwnMobile,
                         ch_fromFamily,
                         ch_fromFriend,
@@ -101,7 +114,8 @@ public class MainActivity extends AppCompatActivity {
                     newParentsMobile;
 
     private int
-                    parentsMobile;
+                    parentsMobile,
+                    points;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -188,6 +202,15 @@ public class MainActivity extends AppCompatActivity {
         te_parentsEmail = (EditText) findViewById(R.id.id_email);
         te_parentsTel = (EditText) findViewById(R.id.id_telephone);
 
+        rb_Boy = (RadioButton) findViewById(R.id.id_radioBoy);
+        rb_Girl = (RadioButton) findViewById(R.id.id_radiGirl);
+        rb_less1h = (RadioButton) findViewById(R.id.id_hoursLessthanOne);
+        rb_1_3 = (RadioButton) findViewById(R.id.id_hours2to3);
+        rb_3plus = (RadioButton) findViewById(R.id.id_hours3to4);
+        rb_jurnY = (RadioButton) findViewById(R.id.id_videoYes);
+        rb_journN = (RadioButton) findViewById(R.id.id_videoNo);
+        rb_DIYY = (RadioButton) findViewById(R.id.id_robotYes);
+        rb_DIYN = (RadioButton) findViewById(R.id.id_robotNo);
 
         //Setting focus on firstQuestion TextView, not to open the tyepad
         firstQuestion.requestFocus();
@@ -206,6 +229,7 @@ public class MainActivity extends AppCompatActivity {
         ageSpinner.setAdapter(dataAdapter);
 
     }//EO OnCreate
+
 
     /**
      * Returns Labels of Selected CheckBoxes
@@ -266,8 +290,11 @@ public class MainActivity extends AppCompatActivity {
            public void onClick(View v) {
 
                displayQuizSummary (createQuizSummary());
+               collectPoints();
+               String stringpoints=""+points;
                summaryArea.requestFocus();
-               Toast.makeText(MainActivity.this, getResources().getString(R.string.postReview), Toast.LENGTH_LONG).show();
+//               Toast.makeText(MainActivity.this, getResources().getString(R.string.postReview), Toast.LENGTH_LONG).show();
+               Toast.makeText(MainActivity.this,stringpoints, Toast.LENGTH_LONG).show();
 
            }
        });
@@ -298,6 +325,7 @@ public class MainActivity extends AppCompatActivity {
                 resetEditTextFields ();
                 //move to new
                 resetSpinner ();
+                resetVariables ();
                 firstQuestion.requestFocus();
                 //iF there was an interview we assume that interviewer got at least the name, a toast encouraging to find another kid to interview
                 if (!name.equals("")&&!name.equals(NOT_PROVIDED) ){
@@ -402,6 +430,117 @@ public class MainActivity extends AppCompatActivity {
         //From Spinner
         kidsAge=String.valueOf(ageSpinner.getSelectedItem());
     }
+
+    /**
+     * Collects points from the answers that are compulsory
+     *
+     */
+    private void collectPoints() {
+
+        points =0;
+        //Points for filling data
+        //
+        //Spinner
+        if (ageSpinner.getSelectedItemPosition()!=0){
+            points+=100;
+        };
+
+        // the EditText fields
+        if (!getFromEditText(R.id.id_name).equals("")){
+            points+=1;
+        };
+        if (!getFromEditText(R.id.id_knowOther).equals("")){
+            points+=8;
+        };
+        if (!getFromEditText(R.id.id_email).equals("")){
+            points+=4;
+        };
+        if (!getFromEditText(R.id.id_telephone).equals("")){
+            points+=5;
+        };
+
+        //radio - even if there would be no right answers, I'll make some points
+
+            //Sex
+        if (!getFromEditText(R.id.id_telephone).equals("")){
+            points+=5;
+        };
+
+        //radio - even if there would be no right answers, I'll make some points to diferentiate,
+        // as it is one of the rules for the project
+
+        if (rb_Boy.isChecked()){
+            points+=1;
+        };
+        if (rb_Girl.isChecked()){
+            points+=2;
+        };
+        if (rb_less1h.isChecked()){
+            points+=5;
+        };
+        if (rb_1_3.isChecked()){
+            points+=3;
+        };
+        if (rb_3plus.isChecked()){
+            points+=1;
+        };
+        if (rb_jurnY.isChecked()){
+            points+=5;
+        };
+        if (rb_journN.isChecked()){
+            points+=0;
+        };
+        if (rb_DIYY.isChecked()){
+            points+=5;
+        };
+        if (rb_DIYN.isChecked()){
+            points+=0;
+        };
+
+        //checkBoxes - everycheck gets a point.Using the mobile for school works gets 100 points
+        //using mobiles frm strangers gives negative points
+
+        if (ch_OwnMobile.isChecked()){
+            points+=1;
+        };
+        if (ch_fromFamily.isChecked()){
+            points+=1;
+        };
+        if (ch_fromFriend.isChecked()){
+            points+=1;
+        };
+        if (ch_fromOther.isChecked()){
+            points+=-5; //you should not ue mobiles from strangers
+        };
+        if (ch_playGames.isChecked()){
+            points+=1;
+        };
+        if (ch_chat.isChecked()){
+            points+=1;
+        };
+        if (ch_calls.isChecked()){
+            points+=1;
+        };
+        if (ch_social.isChecked()){
+            points+=1;
+        };
+        if (ch_wurfWeb.isChecked()){
+            points+=1;
+        };
+        if (ch_school.isChecked()){
+            points+=100;
+        };
+
+    }
+
+    private void resetVariables (){
+//        points=0;
+//        name="";
+//        wantsToLearnOther="";
+//        parentsEmail="";
+//        parentsMobile=0;
+    }
+
 
     /**
      * Creates the summary of the user input
@@ -510,6 +649,7 @@ public class MainActivity extends AppCompatActivity {
             quizSummary += "\n";
             quizSummary += "\n" + PARENTS_EMAIL +" "+ parentsEmail;
             quizSummary += "\n" + PARENTS_TELEPHONE +" "+ newParentsMobile;
+            quizSummary += "\n" + getResources().getString(R.string.pointsString, name, points);
 
             return quizSummary;
     }

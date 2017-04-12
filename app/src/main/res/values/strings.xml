@@ -74,7 +74,7 @@
     <!--<string name="nextInterview">You just interviewed John. It was great. Keep your good job.</string>-->
     <string name="nextInterview">You just interviewed <xliff:g id="name" example="Juanjo">%s</xliff:g>. It was great. Keep your good job.</string>
     <string name="postReview">After reviewing the data, click the button bellow to send it by mail.\nAfter that, do not forget to reset the data before the next interview.</string>
-
+    <string name="pointsString"><xliff:g id="name" example="Juanjo">%s</xliff:g> Collected <xliff:g id="points" example="10">%d</xliff:g> points</string>
 
 </resources>
 

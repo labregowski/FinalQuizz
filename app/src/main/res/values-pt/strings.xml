@@ -53,7 +53,7 @@
     <string name="own_mobile">Telemóvel próprio</string>
     <string name="parent_s_email">E-mail dos pais: </string>
     <string name="parent_s_telephone">Telefone dos pais: </string>
-    <string name="placeholderForSummary">Espaço reservado para o resumo antes de enviar para o e-mail</string>
+    <string name="placeholderForSummary">Instruções:\nDepois de rever o sumário do questionário, envie-o por email, clicando no botão abaixo.\nDepois, poderá fazer o reset aos dados, antes da entrevista seguinte. </string>
     <string name="play_games">Jogar jogos</string>
     <string name="reset">Limpar dados</string>
     <string name="review_questionaire">Revisão do questionário</string>

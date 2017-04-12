@@ -68,7 +68,7 @@
     <string name="parent_s_email">Parent\'s email</string>
     <string name="parent_s_telephone">Parent\'s telephone</string>
     <string name="review_questionaire">Review questionaire</string>
-    <string name="placeholderForSummary">Placeholder for summary before sending to email</string>
+    <string name="placeholderForSummary">Instructions:\nAfter reviewing the quiz summary, send it by email, clicking the button below. \nAfterwards, you can reset the data, before the next interview.</string>
     <string name="send_by_mail">Send by mail</string>
     <string name="reset">Reset</string>
     <!--<string name="nextInterview">You just interviewed John. It was great. Keep your good job.</string>-->

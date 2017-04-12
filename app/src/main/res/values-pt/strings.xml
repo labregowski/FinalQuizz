@@ -68,7 +68,9 @@
     <string name="what_is_your_name">Qual é o seu nome?</string>
     <string name="whose_mobile_do_you_use">De quem é o celular que você usa?</string>
     <string name="yes">Sim</string>
-    <string name="nextInterview">Acabastede entrevistar o(a) <xliff:g id="name" example="Juanjo">%s</xliff:g>. Excelente. Continua com o bom trabalho.</string>
+    <string name="nextInterview">Acabaste de entrevistar o(a) <xliff:g id="name" example="Juanjo">%s</xliff:g>. Excelente. Continua com o bom trabalho.</string>
     <string name="postReview">Após rever os dados, envia por mail.\nNão te esqueças, depois, de fazer reset aos dados, antes da próxima entrevista</string>
     <string name="missesName">Por favor preencha o nome no topo do questionário</string>
+    <string name="pointsString">O(a)<xliff:g id="name" example="Juanjo">%s</xliff:g> conseguiu <xliff:g id="points" example="10">%d</xliff:g> pontos</string>
+
 </resources>

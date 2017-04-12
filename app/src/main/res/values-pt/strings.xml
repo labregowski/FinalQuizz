@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- String Array for age Spinner-->
     <string-array name="spinner_ages">
         <item>(a tua idade)</item>
@@ -27,7 +28,7 @@
     <string name="WANTS_TO_JOIN_E_JOURNALISTS_CLUB">Quer entrar para o clube e-jornalistas</string>
     <string name="YES">Sim</string>
     <string name="YOUR_AGE">(a tua idade)</string>
-    <string name="_2_to_3_hours_per_day">2 a 3 horas por dia</string>
+    <string name="_2_to_3_hours_per_day">1 a 3 horas por dia</string>
     <string name="age_and_sex">Idade e sexo</string>
     <string name="boy">Menino</string>
     <string name="calls_or_video_calls">Chamadas ou chamadas de vídeo</string>
@@ -46,8 +47,8 @@
     <string name="knowMore">O que você gostaria de saber sobre o seu smartphone</string>
     <string name="learnOtherStuff">Há mais alguma coisa que você gostaria de aprender a fazer com seu celular?</string>
     <string name="less_than_1_hour_per_day">menos de 1 hora por dia</string>
-    <string name="mobileUsage">O que você faz com o celular? Abaixo, escolha apenas os 2 mais importantes usos</string>
-    <string name="more_than_4_hours_per_day">mais de 4 horas por dia</string>
+    <string name="mobileUsage">O que você faz com o celular?</string>
+    <string name="more_than_4_hours_per_day">mais de 3 horas por dia</string>
     <string name="no_thanks">Não, obrigado</string>
     <string name="own_mobile">Telemóvel próprio</string>
     <string name="parent_s_email">E-mail dos pais: </string>
@@ -59,7 +60,7 @@
     <string name="school_work">Trabalho de escola</string>
     <string name="sendTo">KidsClubs@nascente.pt</string>
     <string name="send_by_mail">Enviar por e-mail</string>
-    <string name="subject">Questionário de crianças.</string>
+    <string name="subject">Questionário de crianças. Respostas de <xliff:g id="name" example="Juanjo">%s</xliff:g></string>
     <string name="surf_the_web">Navegar na web</string>
     <string name="type_first_name_last_name">Digite o nome / sobrenome</string>
     <string name="wantJoinJournal">Gostaria de participar num clube de meninos jornalistas onde você pode entrevistar pessoas, editar vídeos e fotos no seu celular?</string>
@@ -67,4 +68,6 @@
     <string name="what_is_your_name">Qual é o seu nome?</string>
     <string name="whose_mobile_do_you_use">De quem é o celular que você usa?</string>
     <string name="yes">Sim</string>
+    <string name="nextInterview">Acabastede entrevistar o(a) <xliff:g id="name" example="Juanjo">%s</xliff:g>. Excelente. Continua com o bom trabalho.</string>
+    <string name="postReview">Após rever os dados, envia por mail.\nNão te esqueças, depois, de fazer reset aos dados, antes da próxima entrevista</string>
 </resources>

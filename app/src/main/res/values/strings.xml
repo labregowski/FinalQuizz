@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Smartphone Usage by Youngsters</string>
     <!-- String Array for age Spinner-->
     <string-array name="spinner_ages">
@@ -31,8 +31,7 @@
 
 
     <!-- email Setup -->
-    <!--TODO Aqui é para meter o xlif!!!-->
-    <string name="subject">Kids quiz. Result from KID XLIFT</string>
+    <string name="subject">Kids quiz. Result from <xliff:g id="name" example="Juanjo">%s</xliff:g></string>
     <string name="sendTo">KidsClubs@nascente.pt</string>
     <!-- UI -->
     <string name="what_is_your_name">What is your name?</string>
@@ -45,14 +44,14 @@
     <string name="how_many_hours_per_day">how many hours per day</string>
     <string name="how_often_you_use_a_smartphone">How often you use a smartphone?</string>
     <string name="less_than_1_hour_per_day">less than 1 hour per day</string>
-    <string name="_2_to_3_hours_per_day">2 to 3 hours per day</string>
-    <string name="more_than_4_hours_per_day">more than 4 hours per day</string>
+    <string name="_2_to_3_hours_per_day">1 to 3 hours per day</string>
+    <string name="more_than_4_hours_per_day">more than 3 hours per day</string>
     <string name="whose_mobile_do_you_use">Whose mobile do you use?</string>
     <string name="own_mobile">Own mobile</string>
     <string name="from_a_family_member">From a family member</string>
     <string name="from_a_friend">From a friend</string>
     <string name="from_someone_else">From someone Else</string>
-    <string name="mobileUsage">What do you do with the mobile? From bellow, choose only the 2 most important usages</string>
+    <string name="mobileUsage">What do you do with the mobile?</string>
     <string name="play_games">Play Games</string>
     <string name="chat">Chat</string>
     <string name="calls_or_video_calls">Calls or video calls</string>
@@ -72,6 +71,10 @@
     <string name="placeholderForSummary">Placeholder for summary before sending to email</string>
     <string name="send_by_mail">Send by mail</string>
     <string name="reset">Reset</string>
+    <!--<string name="nextInterview">You just interviewed John. It was great. Keep your good job.</string>-->
+    <string name="nextInterview">You just interviewed <xliff:g id="name" example="Juanjo">%s</xliff:g>. It was great. Keep your good job.</string>
+    <string name="postReview">After reviewing the data, click the button bellow to send it by mail.\nAfter that, do not forget to reset the data before the next interview.</string>
+
 
 </resources>
 

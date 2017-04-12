@@ -14,6 +14,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static java.lang.Integer.parseInt;
 
@@ -25,37 +26,20 @@ public class MainActivity extends AppCompatActivity {
     // = getResources().getString(R.string.NOT_PROVIDED);
     private static final String DID_NOT_REPLY = "did not reply";
 //    private static final String NOT_PROVIDED = "not provided";
-    private String  NOT_PROVIDED,
-                    YOUR_AGE,
-                    YES,
-                    WANTS_TO_JOIN_E_JOURNALISTS_CLUB,
-                    WANTS_TO_JOIN_DIY_ROBOTS_CLUB,
-                    IS_INTERESTED_IN,
-                    USUAL_MOBILE,
-                    USES_SMARTPHONE_TO,
-                    PARENTS_TELEPHONE,
-                    PARENTS_EMAIL,
-                    AVERAGE_MOBILE_USAGE,
-                    AGE,
-                    SEX,
-                    NAME;
-
-
-//    private static final String YOUR_AGE = "(your age)";
-//    private static final String YES = "Yes";
-//    private static final String WANTS_TO_JOIN_E_JOURNALISTS_CLUB = "Wants to join e-Journalists Club";
-//    private static final String WANTS_TO_JOIN_DIY_ROBOTS_CLUB = "Wants to join DIY Robots Club";
-//    private static final String IS_INTERESTED_IN = "Is interested in ";
-//    private static final String USUAL_MOBILE = "Usual Mobile: ";
-//    private static final String USES_SMARTPHONE_TO = "Uses smartphone to: ";
-//    private static final String PARENTS_TELEPHONE = "Parents' telephone: ";
-//    private static final String PARENTS_EMAIL = "Parents' email: ";
-//    private static final String AVERAGE_MOBILE_USAGE = "Average Mobile Usage: ";
-//    private static final String AGE = "Age: ";
-//    private static final String SEX = "Sex: ";
-//    private static final String NAME = "Name: ";
-
-
+    private String      NOT_PROVIDED,
+                        YOUR_AGE,
+                        YES,
+                        WANTS_TO_JOIN_E_JOURNALISTS_CLUB,
+                        WANTS_TO_JOIN_DIY_ROBOTS_CLUB,
+                        IS_INTERESTED_IN,
+                        USUAL_MOBILE,
+                        USES_SMARTPHONE_TO,
+                        PARENTS_TELEPHONE,
+                        PARENTS_EMAIL,
+                        AVERAGE_MOBILE_USAGE,
+                        AGE,
+                        SEX,
+                        NAME;
 
     //UI components
     private Spinner     ageSpinner;
@@ -69,6 +53,21 @@ public class MainActivity extends AppCompatActivity {
                         radioDailyUsageGroup,
                         radioGroupInterestedInJournalismClub,
                         radioGroupInterestedInDIYRobotic;
+    private CheckBox    ch_OwnMobile,
+                        ch_fromFamily,
+                        ch_fromFriend,
+                        ch_fromOther,
+
+                        ch_playGames,
+                        ch_chat,
+                        ch_calls,
+                        ch_social,
+                        ch_wurfWeb,
+                        ch_school;
+    private EditText    te_name,
+                        te_otherInterests,
+                        te_parentsEmail,
+                        te_parentsTel;
 
     //Declaring Variables
     private String
@@ -95,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                     socialNetworks,
                     surfWeb,
                     schoolWork,
-                    // these next, are auxiiary variables to make text more natural
+                    // these next, are auxiliary variables to make text more natural
                     joinJournalClub,
                     joinDIYRobots,
                     otherInterests,
@@ -110,52 +109,52 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //UI and code needed Strings initialization
-                    NOT_PROVIDED = getResources().getString(R.string.NOT_PROVIDED);
+        NOT_PROVIDED = getResources().getString(R.string.NOT_PROVIDED);
 
-                    YOUR_AGE = getResources().getString(R.string.YOUR_AGE);
-                    YES = getResources().getString(R.string.YES);
-                    WANTS_TO_JOIN_E_JOURNALISTS_CLUB = getResources().getString(R.string.WANTS_TO_JOIN_E_JOURNALISTS_CLUB);
-                    WANTS_TO_JOIN_DIY_ROBOTS_CLUB = getResources().getString(R.string.WANTS_TO_JOIN_DIY_ROBOTS_CLUB);
-                    IS_INTERESTED_IN = getResources().getString(R.string.IS_INTERESTED_IN);
-                    USUAL_MOBILE = getResources().getString(R.string.USUAL_MOBILE);
-                    USES_SMARTPHONE_TO = getResources().getString(R.string.USES_SMARTPHONE_TO);
-                    PARENTS_TELEPHONE = getResources().getString(R.string.PARENTS_TELEPHONE);
-                    PARENTS_EMAIL = getResources().getString(R.string.PARENTS_EMAIL);
-                    AVERAGE_MOBILE_USAGE = getResources().getString(R.string.AVERAGE_MOBILE_USAGE);
-                    AGE = getResources().getString(R.string.AGE);
-                    SEX = getResources().getString(R.string.SEX);
-                    NAME = getResources().getString(R.string.NAME);
+        YOUR_AGE = getResources().getString(R.string.YOUR_AGE);
+        YES = getResources().getString(R.string.YES);
+        WANTS_TO_JOIN_E_JOURNALISTS_CLUB = getResources().getString(R.string.WANTS_TO_JOIN_E_JOURNALISTS_CLUB);
+        WANTS_TO_JOIN_DIY_ROBOTS_CLUB = getResources().getString(R.string.WANTS_TO_JOIN_DIY_ROBOTS_CLUB);
+        IS_INTERESTED_IN = getResources().getString(R.string.IS_INTERESTED_IN);
+        USUAL_MOBILE = getResources().getString(R.string.USUAL_MOBILE);
+        USES_SMARTPHONE_TO = getResources().getString(R.string.USES_SMARTPHONE_TO);
+        PARENTS_TELEPHONE = getResources().getString(R.string.PARENTS_TELEPHONE);
+        PARENTS_EMAIL = getResources().getString(R.string.PARENTS_EMAIL);
+        AVERAGE_MOBILE_USAGE = getResources().getString(R.string.AVERAGE_MOBILE_USAGE);
+        AGE = getResources().getString(R.string.AGE);
+        SEX = getResources().getString(R.string.SEX);
+        NAME = getResources().getString(R.string.NAME);
 
         //Initialize variables - Read in a blog that it is good preceureto innitialize in onCreate.
-                    name="";
-                    wantsToLearnOther="";
-                    parentsEmail="";
-                    // these next, will come from Radio or Check boxes
-                    kidsSex="";
-                    usagePerDay="";
+        name="";
+        wantsToLearnOther="";
+        parentsEmail="";
+        // these next, will come from Radio or Check boxes
+        kidsSex="";
+        usagePerDay="";
 
-                    wantsJournalistClub ="";
-                    wantsDIYRobots="";
-                    kidsAge="";
-                    parentsMobile=0;
-                    joinJournalClub ="";
-                    joinDIYRobots="";
-                    otherInterests="";
-                    newParentsMobile="";
+        wantsJournalistClub ="";
+        wantsDIYRobots="";
+        kidsAge="";
+        parentsMobile=0;
+        joinJournalClub ="";
+        joinDIYRobots="";
+        otherInterests="";
+        newParentsMobile="";
 
-                    mobileOwnership="";
-                    ownMobile ="";
-                    fromFamily ="";
-                    fromFriend ="";
-                    fromOther ="";
+        mobileOwnership="";
+        ownMobile ="";
+        fromFamily ="";
+        fromFriend ="";
+        fromOther ="";
 
-                    usage="";
-                    playGames ="";
-                    chat ="";
-                    callsOrVideo ="";
-                    socialNetworks ="";
-                    surfWeb ="";
-                    schoolWork ="";
+        usage="";
+        playGames ="";
+        chat ="";
+        callsOrVideo ="";
+        socialNetworks ="";
+        surfWeb ="";
+        schoolWork ="";
 
         // Initiate UI components
         ageSpinner = (Spinner) findViewById(R.id.id_ageSpinner);
@@ -172,12 +171,31 @@ public class MainActivity extends AppCompatActivity {
         summaryArea= (TextView)findViewById(R.id.id_quizSummary);
         firstQuestion = (TextView)findViewById(R.id.id_firstQuestion);
 
-        //Setting focu on firstQuestion TextView, not to open the tyepad
+        ch_OwnMobile = (CheckBox) findViewById(R.id.id_ownMobile);
+        ch_fromFamily = (CheckBox) findViewById(R.id.id_familyMobile);
+        ch_fromFriend = (CheckBox) findViewById(R.id.id_friendMobile);
+        ch_fromOther = (CheckBox) findViewById(R.id.id_fromSomeonElse);
+
+        ch_playGames = (CheckBox) findViewById(R.id.id_playGames);
+        ch_chat = (CheckBox) findViewById(R.id.id_chat);
+        ch_calls = (CheckBox) findViewById(R.id.id_talk);
+        ch_social = (CheckBox) findViewById(R.id.id_socialNetworks);
+        ch_wurfWeb = (CheckBox) findViewById(R.id.id_surfWeb);
+        ch_school = (CheckBox) findViewById(R.id.id_schoolWork);
+
+        te_name = (EditText) findViewById(R.id.id_name);
+        te_otherInterests = (EditText) findViewById(R.id.id_knowOther);
+        te_parentsEmail = (EditText) findViewById(R.id.id_email);
+        te_parentsTel = (EditText) findViewById(R.id.id_telephone);
+
+
+        //Setting focus on firstQuestion TextView, not to open the tyepad
         firstQuestion.requestFocus();
 
         // Calling Add listeners' Methods
         addListenerEmailButton();
         addListenerSubmitButton();
+        addListenerResetButton ();
 
 
         // Create an ArrayAdapter using the string array and a default spinner layout
@@ -249,6 +267,7 @@ public class MainActivity extends AppCompatActivity {
 
                displayQuizSummary (createQuizSummary());
                summaryArea.requestFocus();
+               Toast.makeText(MainActivity.this, getResources().getString(R.string.postReview), Toast.LENGTH_SHORT).show();
 
            }
        });
@@ -265,6 +284,82 @@ public class MainActivity extends AppCompatActivity {
         }
     });
     }
+
+    /**
+     * Adds Listener to reset Button and displays summary
+     */
+    public void addListenerResetButton() {
+        btnReset.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                resetRadioGroups ();
+                resetCheckBoxes();
+                resetSummaryTextView();
+                resetEditTextFields ();
+                //move to new
+                resetSpinner ();
+                firstQuestion.requestFocus();
+                //iF there was an interview we assume that interviewer got at least the name, a toast encouraging to find another kid to interview
+                if (!name.equals("")&&!name.equals(NOT_PROVIDED) ){
+                Toast.makeText(MainActivity.this, getResources().getString(R.string.nextInterview, name), Toast.LENGTH_SHORT).show();
+               }
+                // reset name (the variable that says the interview was performed or not
+                name="";
+            }
+        });
+    }
+
+    /**
+     * Resets all radio Button groups
+     */
+    public void resetRadioGroups (){
+        radioSexGroup.clearCheck();
+        radioDailyUsageGroup.clearCheck();
+        radioGroupInterestedInJournalismClub.clearCheck();
+        radioGroupInterestedInDIYRobotic.clearCheck();
+    }
+
+    /**
+     * Resets all check Boxes
+     */
+    public void resetCheckBoxes (){
+
+        ch_OwnMobile.setChecked(false);
+        ch_fromFamily.setChecked(false);
+        ch_fromFriend.setChecked(false);
+        ch_fromOther.setChecked(false);
+
+        ch_playGames.setChecked(false);
+        ch_chat.setChecked(false);
+        ch_calls.setChecked(false);
+        ch_social.setChecked(false);
+        ch_wurfWeb.setChecked(false);
+        ch_school.setChecked(false);
+    }
+    /**
+     * Reset SUmmary Field
+     */
+    public void resetSummaryTextView (){
+        summaryArea.setText("");
+    }
+
+    /**
+     * Reset SUmmary Field
+     */
+    public void resetEditTextFields (){
+
+        te_name.setText("");
+        te_otherInterests.setText("");
+        te_parentsEmail.setText("");
+        te_parentsTel.setText("");
+    }
+    /**
+     * Reset Spinner
+     */
+    public void resetSpinner (){
+        ageSpinner.setSelection(0);
+    }
+
 
 
     /**
@@ -429,7 +524,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *TODO email not launching
+     *Sends email to central services
      * @param summary is the message to be sent to office, containing data
      */
 
@@ -438,7 +533,7 @@ public class MainActivity extends AppCompatActivity {
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
         intent.putExtra(Intent.EXTRA_EMAIL, new String[] {getResources().getString(R.string.sendTo)});
 //        intent.putExtra(Intent.EXTRA_EMAIL, getResources().getString(R.string.sendTo));
-        intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.subject));
+        intent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.subject, name));
         intent.putExtra(Intent.EXTRA_TEXT, summary);
 
         if (intent.resolveActivity(getPackageManager())!=null){

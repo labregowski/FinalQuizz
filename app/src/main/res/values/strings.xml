@@ -2,19 +2,24 @@
     <string name="app_name">Smartphone Usage by Youngsters</string>
     <!-- String Array for age Spinner-->
         <string-array name="spinner_ages">
-            <item>5</item>
-            <item>6</item>
-            <item>7</item>
-            <item>8</item>
-            <item>9</item>
-            <item>10</item>
-            <item>11</item>
-            <item>12</item>
+            <item>(your age)</item>
+            <item>6 years\' Old</item>
+            <item>7 years\' Old</item>
+            <item>8 years\' Old</item>
+            <item>9 years\' Old</item>
+            <item>10 years\' Old</item>
+            <item>11 years\' Old</item>
+            <item>12 years\' Old</item>
         </string-array>
 
     <!-- Field labels -->
     <string name="route1">Climbing Route #1</string>
 
+
+    <!-- email Setup -->
+    <!--TODO Aqui é para metero xlif!!!-->
+    <string name="subject">Kids quiz. Result from KID XLIFT</string>
+    <string name="sendTo">WorkshopsForKids@nascente.pt</string>
 
 </resources>
 

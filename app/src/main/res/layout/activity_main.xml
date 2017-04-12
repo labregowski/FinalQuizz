@@ -8,28 +8,36 @@
 
     <ScrollView
         style="@style/globalContainer"
-        tools:layout_editor_absoluteX="dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_marginTop="8dp"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="dp">
 
         <LinearLayout style="@style/hMatch_vWrap">
 
             <LinearLayout
                 style="@style/hMatch_vWrap"
                 android:orientation="vertical">
+
                 <TextView
                     style="@style/groupTitleTextView"
                     android:text="What is your name?" />
+
                 <EditText
                     android:id="@+id/id_name"
                     style="@style/hMatch_vWrap"
                     android:hint="type First Name / Last Name" />
+
                 <TextView
                     style="@style/groupTitleTextView"
                     android:text="Age and sex" />
+
                 <LinearLayout
                     style="@style/hMatch_vWrap"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
                     <TextView
                         style="@style/hWrap_vWrap"
                         android:hint="I am  a " />
@@ -38,15 +46,11 @@
                     <Spinner
                         android:id="@+id/id_ageSpinner"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:minWidth="10dp"/>
-                    <TextView
-                        style="@style/hWrap_vWrap"
-                        android:hint="years' old" />
+                        android:layout_height="wrap_content" />
 
 
                     <RadioGroup
-                        android:id="@+id/boyOrGirl"
+                        android:id="@+id/id_RG_boyOrGirl"
                         style="@style/hWrap_vWrap"
                         android:orientation="horizontal">
 
@@ -68,6 +72,7 @@
                     android:text="How often you use a smartphone? " />
 
                 <RadioGroup
+                    android:id="@+id/id_RG_hoursDay"
                     style="@style/hMatch_vWrap"
                     android:orientation="vertical">
 
@@ -91,20 +96,20 @@
                     style="@style/groupTitleTextView"
                     android:text="Whose mobile do you use?" />
 
-                    <CheckBox
-                        android:id="@+id/id_ownMobile"
-                        style="@style/hWrap_vWrap"
-                        android:text="My own mobile" />
+                <CheckBox
+                    android:id="@+id/id_ownMobile"
+                    style="@style/hWrap_vWrap"
+                    android:text="Own mobile" />
 
                 <CheckBox
-                        android:id="@+id/id_familyMobile"
-                        style="@style/hWrap_vWrap"
-                        android:text="From a family member" />
+                    android:id="@+id/id_familyMobile"
+                    style="@style/hWrap_vWrap"
+                    android:text="From a family member" />
 
                 <CheckBox
-                        android:id="@+id/id_friendMobile"
-                        style="@style/hWrap_vWrap"
-                        android:text="From a friend" />
+                    android:id="@+id/id_friendMobile"
+                    style="@style/hWrap_vWrap"
+                    android:text="From a friend" />
 
                 <CheckBox
                     android:id="@+id/id_fromSomeonElse"
@@ -145,7 +150,7 @@
                     android:orientation="horizontal">
 
                     <CheckBox
-                        android:id="@+id/socialNetworks"
+                        android:id="@+id/id_socialNetworks"
                         style="@style/checkOrRadioElement"
                         android:text="Facebook, Pinterest, Instagram" />
                 </LinearLayout>
@@ -155,7 +160,7 @@
                     android:orientation="horizontal">
 
                     <CheckBox
-                        android:id="@+id/surfWeb"
+                        android:id="@+id/id_surfWeb"
                         style="@style/checkOrRadioElement"
                         android:text="Surf the web" />
 
@@ -167,9 +172,10 @@
 
                 <TextView
                     style="@style/groupTitleTextView"
-                    android:text="Would you like to learn to edit your photos and videos on your mobile?" />
+                    android:text="Would you like to join a youngsters' journal club where you can interview people, edit videos and photos on your mobile?" />
 
                 <RadioGroup
+                    android:id="@+id/id_RG_journalism"
                     style="@style/hMatch_vWrap"
                     android:orientation="vertical">
 
@@ -189,6 +195,7 @@
                     android:text="Would you like to make a small robot and control it from your mobile?" />
 
                 <RadioGroup
+                    android:id="@+id/id_RG_DIYRobotic"
                     style="@style/hMatch_vWrap"
                     android:orientation="vertical">
 
@@ -214,19 +221,19 @@
 
                 <TextView
                     style="@style/groupTitleTextView"
-                    android:text="Wantus to contact your parents about this? Leave their email and / or telephone" />
+                    android:text="Want us to contact your parents about this? Leave their email and / or telephone" />
 
                 <EditText
                     android:id="@+id/id_email"
                     style="@style/hMatch_vWrap"
                     android:hint="Parent's email"
-                    android:inputType="textEmailAddress"/>
+                    android:inputType="textEmailAddress" />
 
                 <EditText
                     android:id="@+id/id_telephone"
                     style="@style/hMatch_vWrap"
                     android:hint="Parent's telephone"
-                    android:inputType="number"/>
+                    android:inputType="number" />
 
                 <LinearLayout
                     style="@style/hMatch_vWrap"
@@ -236,22 +243,32 @@
 
                 <Button
                     android:id="@+id/id_submit"
-                    style="@style/hWrap_vWrap"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Submit" />
+                    style="@style/standardButton"
+                    android:text="Submit"
+                    />
 
                 <TextView
+                    android:id="@+id/id_quizSummary"
                     style="@style/groupTitleTextView"
                     android:hint="Placeholder for summary before sending to email" />
+                <RelativeLayout
+                    style="@style/hMatch_vMatch"
+                    android:layout_marginBottom="20dp">
+                    <Button
+                        android:id="@+id/id_eMailData"
+                        style="@style/standardButton"
+                        android:text="Send by mail"
+                        />
 
-                <Button
-                    android:id="@+id/id_mailData"
-                    style="@style/hWrap_vWrap"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="5dp"
-                    android:text="Submit" />
-
+                    <Button
+                        android:id="@+id/id_reset"
+                        style="@style/standardButton"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:text="Reset"
+                        />
+                     </RelativeLayout>
 
             </LinearLayout>
 

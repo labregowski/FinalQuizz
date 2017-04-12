@@ -31,15 +31,7 @@
         <item name="android:padding">16dp</item>
     </style>
 
-    <!--General TextViews-->TODO not in USE
-    <style name="generalTextView">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">4dp</item>
-        <item name="android:textColor">@color/primary_text</item>
-    </style>
-
-    <!--GruopTitle TextViews-->
+    <!--Group Title TextViews-->
     <style name="groupTitleTextView" parent="hMatch_vWrap">
         <item name="android:layout_marginTop">12dp</item>
         <item name="android:layout_marginBottom">6dp</item>
@@ -48,6 +40,22 @@
 
     <style name="checkOrRadioElement" parent="hWrap_vWrap">
         <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <!--Buttons-->
+    <style name="standardButton" parent="hWrap_vWrap">
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+
+    <!--General TextViews TODO not in USE-->
+    <style name="generalTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textColor">@color/primary_text</item>
     </style>
 
 </resources>

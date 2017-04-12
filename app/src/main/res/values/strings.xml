@@ -1,25 +1,39 @@
 <resources>
     <string name="app_name">Smartphone Usage by Youngsters</string>
     <!-- String Array for age Spinner-->
-        <string-array name="spinner_ages">
-            <item>(your age)</item>
-            <item>6 years\' Old</item>
-            <item>7 years\' Old</item>
-            <item>8 years\' Old</item>
-            <item>9 years\' Old</item>
-            <item>10 years\' Old</item>
-            <item>11 years\' Old</item>
-            <item>12 years\' Old</item>
-        </string-array>
+    <string-array name="spinner_ages">
+        <item>(your age)</item>
+        <item>6 years\' Old</item>
+        <item>7 years\' Old</item>
+        <item>8 years\' Old</item>
+        <item>9 years\' Old</item>
+        <item>10 years\' Old</item>
+        <item>11 years\' Old</item>
+        <item>12 years\' Old</item>
+    </string-array>
 
-    <!-- Field labels -->
-    <string name="route1">Climbing Route #1</string>
+    <!-- MainActivity.java -->
+    <string name="did_not_reply">did not reply</string>
+    <string name="NOT_PROVIDED">not providedyy</string>
+    <string name="YOUR_AGE">(your age)</string>
+    <string name="YES">Yes</string>
+    <string name="WANTS_TO_JOIN_E_JOURNALISTS_CLUB">Wants to join e-Journalists Club</string>
+    <string name="WANTS_TO_JOIN_DIY_ROBOTS_CLUB">Wants to join DIY Robots Club</string>
+    <string name="IS_INTERESTED_IN">Is interested in </string>
+    <string name="USUAL_MOBILE">Usual Mobile: </string>
+    <string name="USES_SMARTPHONE_TO">Uses smartphone to: </string>
+    <string name="PARENTS_TELEPHONE">Parents\' telephone: </string>
+    <string name="PARENTS_EMAIL">Parents\' email: </string>
+    <string name="AVERAGE_MOBILE_USAGE">Average Mobile Usage: </string>
+    <string name="AGE">Age: </string>
+    <string name="SEX">Sex: </string>
+    <string name="NAME">Name: </string>
 
 
     <!-- email Setup -->
-    <!--TODO Aqui é para metero xlif!!!-->
+    <!--TODO Aqui é para meter o xlif!!!-->
     <string name="subject">Kids quiz. Result from KID XLIFT</string>
-    <string name="sendTo">WorkshopsForKids@nascente.pt</string>
+    <string name="sendTo">KidsClubs@nascente.pt</string>
 
 </resources>
 

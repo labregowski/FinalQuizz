@@ -15,11 +15,30 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 import static java.lang.Integer.parseInt;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Used Strings
+    //TODO - crashing when getting Resources from strings.xml
+//    private String DID_NOT_REPLY = getResources().getString(R.string.did_not_reply);
+    private String NOT_PROVIDED;// = getResources().getString(R.string.NOT_PROVIDED);
+    private static final String DID_NOT_REPLY = "did not reply";
+//    private static final String NOT_PROVIDED = "not provided";
+
+    private static final String YOUR_AGE = "(your age)";
+    private static final String YES = "Yes";
+    private static final String WANTS_TO_JOIN_E_JOURNALISTS_CLUB = "Wants to join e-Journalists Club";
+    private static final String WANTS_TO_JOIN_DIY_ROBOTS_CLUB = "Wants to join DIY Robots Club";
+    private static final String IS_INTERESTED_IN = "Is interested in ";
+    private static final String USUAL_MOBILE = "Usual Mobile: ";
+    private static final String USES_SMARTPHONE_TO = "Uses smartphone to: ";
+    private static final String PARENTS_TELEPHONE = "Parents' telephone: ";
+    private static final String PARENTS_EMAIL = "Parents' email: ";
+    private static final String AVERAGE_MOBILE_USAGE = "Average Mobile Usage: ";
+    private static final String AGE = "Age: ";
+    private static final String SEX = "Sex: ";
+    private static final String NAME = "Name: ";
     //UI components
     private Spinner     ageSpinner;
     private Button      btnSubmit,
@@ -71,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        NOT_PROVIDED = getResources().getString(R.string.NOT_PROVIDED);
+
 
         //Initialize variables - Read in a blog that it is good preceureto innitialize in onCreate.
                     name="";
@@ -173,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
 
             return radioButton.getText().toString();
         }
-        return "did not reply";
+        return getResources().getString(R.string.did_not_reply);
     }
 
     /**
@@ -207,12 +229,9 @@ public class MainActivity extends AppCompatActivity {
     btnEmail.setOnClickListener(new View.OnClickListener(){
         @Override
         public void onClick(View v) {
-
             emailSummary (createQuizSummary());
-
         }
     });
-
     }
 
 
@@ -266,37 +285,37 @@ public class MainActivity extends AppCompatActivity {
         // Preparing nicer text for "Wants to Learn"
 
             if (name.equals("")){
-                name+="not provided";
+                name+= NOT_PROVIDED;
             };
 
-            if (kidsAge.equals("(your age)")){
-                kidsAge = "did not reply";
+            if (kidsAge.equals(YOUR_AGE)){
+                kidsAge = getResources().getString(R.string.did_not_reply);
             };
 
-           if (wantsJournalistClub.equals("Yes")){
-               joinJournalClub = "\n" + "Wants to join e-Journalists Club";
+           if (wantsJournalistClub.equals(YES)){
+               joinJournalClub = "\n" + WANTS_TO_JOIN_E_JOURNALISTS_CLUB;
            };
 
-           if (wantsDIYRobots.equals("Yes")){
-               joinDIYRobots = "\n" + "Wants to join DIY Robots Club";
+           if (wantsDIYRobots.equals(YES)){
+               joinDIYRobots = "\n" + WANTS_TO_JOIN_DIY_ROBOTS_CLUB;
             };
 
            if (!wantsToLearnOther.equals("")){
-               otherInterests = "\n" + "Is interested in "+ wantsToLearnOther;
+               otherInterests = "\n" + IS_INTERESTED_IN + wantsToLearnOther;
             };
 
             if (parentsEmail.equals("")){
-                parentsEmail="not provided";
+                parentsEmail= NOT_PROVIDED;
             };
 
             if (parentsMobile==0){
-                newParentsMobile="not provided";
+                newParentsMobile= NOT_PROVIDED;
             }else{
                 newParentsMobile+= parentsMobile;
             };
 
             //Mobile Ownership
-            mobileOwnership = "Usual Mobile: ";
+            mobileOwnership = USUAL_MOBILE;
             String mobileOwnershipStatic = mobileOwnership;
             if (!ownMobile.equals("")){
                 mobileOwnership += "\n         "+ownMobile;
@@ -316,13 +335,13 @@ public class MainActivity extends AppCompatActivity {
             // DEPRECATED if (ownMobile.equals("")&&fromFamily.equals("")&&fromFriend.equals("")&&fromOther.equals(""))
             if (mobileOwnership.equals(mobileOwnershipStatic))
             {
-                mobileOwnership += "did not reply";
+                mobileOwnership += getResources().getString(R.string.did_not_reply);
             };
 
 
             //Usage
 
-            usage="Uses smartphone to: ";
+            usage= USES_SMARTPHONE_TO;
             String usageStatic = usage;
             if (!playGames.equals("")){
             usage += "\n         "+playGames;
@@ -347,14 +366,14 @@ public class MainActivity extends AppCompatActivity {
 //                    &&surfWeb.equals("")&&schoolWork.equals(""))
             if (usage.equals(usageStatic))
             {
-                usage += "did not reply";
+                usage += getResources().getString(R.string.did_not_reply);
             };
 
-            String quizSummary = "Name: " + name;
-            quizSummary += "\n" + "Sex: " + kidsSex;
-            quizSummary += "\n" + "Age: " + kidsAge;
+            String quizSummary = NAME + name;
+            quizSummary += "\n" + SEX + kidsSex;
+            quizSummary += "\n" + AGE + kidsAge;
             quizSummary += "\n";
-            quizSummary += "\n" + "Average Mobile Usage: " + usagePerDay;
+            quizSummary += "\n" + AVERAGE_MOBILE_USAGE + usagePerDay;
             quizSummary += "\n" + mobileOwnership;
             quizSummary += "\n" + usage;
             quizSummary += "\n";
@@ -362,8 +381,8 @@ public class MainActivity extends AppCompatActivity {
             quizSummary += joinDIYRobots;
             quizSummary += otherInterests;
             quizSummary += "\n";
-            quizSummary += "\n" + "Parents' email: " + parentsEmail;
-            quizSummary += "\n" +  "Parents' telephone: " + newParentsMobile;
+            quizSummary += "\n" + PARENTS_EMAIL + parentsEmail;
+            quizSummary += "\n" + PARENTS_TELEPHONE + newParentsMobile;
 
             return quizSummary;
     }
